@@ -1,0 +1,6 @@
+state.photos ||= {};
+const avatar=n=>state.photos[n]?`<img class="avatar" src="${state.photos[n]}" alt="">`:'👤';
+const total=n=>Object.entries(state.done[n]||{}).reduce((s,[k,v])=>v?s+(exercise[+k.split('-').pop()]?.[2]||0):s,0);
+const baseRender=render;render=function(){baseRender();$('#ranking').innerHTML=[...state.profiles].sort((a,b)=>total(b)-total(a)).map((n,i)=>`<div class="rank"><b>${i+1}.</b>${avatar(n)}<strong>${n}</strong><strong>${total(n)} P</strong></div>`).join('');$('#profileButton span').innerHTML=`${avatar(state.active)} ${state.active}`};
+const baseProfiles=profiles;profiles=function(){baseProfiles();$('#photoName').textContent=state.active;document.querySelectorAll('.profile-row button').forEach(b=>b.innerHTML=`${avatar(b.dataset.name)} ${b.dataset.name}`)};
+$('#photoInput').onchange=async e=>{const f=e.target.files[0];if(!f)return;const img=new Image();img.src=URL.createObjectURL(f);await img.decode();const c=document.createElement('canvas');c.width=c.height=180;const x=c.getContext('2d'),s=Math.min(img.width,img.height);x.drawImage(img,(img.width-s)/2,(img.height-s)/2,s,s,0,0,180,180);state.photos[state.active]=c.toDataURL('image/jpeg',.75);URL.revokeObjectURL(img.src);store();profiles();render()};render();
