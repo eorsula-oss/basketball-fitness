@@ -45,3 +45,11 @@ begin
 end $$;
 revoke all on function public.upsert_fitness_ranking(uuid,text,text,text,integer) from public;
 grant execute on function public.upsert_fitness_ranking(uuid,text,text,text,integer) to anon;
+
+create or replace function public.delete_fitness_ranking(p_profile_id uuid,p_owner_token text)
+returns void language plpgsql security definer set search_path=public as $$
+begin
+  delete from public.fitness_rankings where profile_id=p_profile_id and owner_hash=encode(digest(p_owner_token,'sha256'),'hex');
+end $$;
+revoke all on function public.delete_fitness_ranking(uuid,text) from public;
+grant execute on function public.delete_fitness_ranking(uuid,text) to anon;
