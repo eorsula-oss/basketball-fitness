@@ -1,10 +1,14 @@
 {
-  "version": 17,
-  "title": "Neu in Basketball Fitness",
-  "changes": [
-    "Alle bereits eingetragenen Häkchen und Punkte bleiben erhalten. Beim Update wird kein Fortschritt zurückgesetzt.",
-    "Das Training beginnt bereits am Samstag, 18. Juli 2026, und läuft bis Dienstag, 1. September 2026.",
-    "Aufgaben können nur für den heutigen Tag oder rückwirkend abgehakt werden. Zukünftige Tage sind sichtbar, aber noch gesperrt.",
-    "Bitte den Wiederherstellungscode aus den Einstellungen sicher aufbewahren. Er wird benötigt, wenn die App auf einem neuen Gerät wiederhergestellt werden soll."
-  ]
+    "version":  21,
+    "title":  "Herbstferien 2026 â€“ sicherer Saisonstart",
+    "changes":  [
+                    "Die Herbstferien-Challenge lÃ¤uft vom 17. bis 31. Oktober 2026.",
+                    "Alle bisherigen Namensprofile und Gruppen bleiben erhalten; die Sommerpunkte und HÃ¤kchen werden einmalig auf 0 zurÃ¼ckgesetzt.",
+                    "Platzhalterprofile â€žKind 1â€œ werden entfernt und kÃ¶nnen nicht erneut angelegt werden.",
+                    "Neue Profile werden vor dem Anlegen auf mÃ¶gliche Dubletten geprÃ¼ft.",
+                    "Profilnamen werden sicher dargestellt und Ranglistenpunkte kÃ¶nnen serverseitig nicht Ã¼ber das Tagesmaximum hinaus erhÃ¶ht werden.",
+                    "Die Aktualisierungsmeldung erscheint nur noch bei einer tatsÃ¤chlich verfÃ¼gbaren neuen Version.",
+                    "Cloud-Wiederherstellungen Ã¼bernehmen Profile, aber keine Punkte aus der Sommersaison. Bitte den Wiederherstellungscode weiterhin sicher aufbewahren.",
+                    "Die App lÃ¤dt nach einer Aktualisierung zuverlÃ¤ssig alle Dateien derselben Version; alte Sommeransichten werden nicht mehr mit neuen Inhalten vermischt."
+                ]
 }
